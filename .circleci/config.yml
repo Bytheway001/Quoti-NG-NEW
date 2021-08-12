@@ -27,7 +27,7 @@ commands:
         type: string
         default: development
     steps:
-      - run: REACT_APP_API_URL=<<parameters.environment>> yarn run build
+      - run: REACT_APP_CLIENT_ID=testclient REACT_APP_API_URL=<<parameters.environment>> yarn run build
   deploy_build:
     description: "Send data to VPS"
     parameters:
