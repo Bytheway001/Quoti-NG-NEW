@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Row, Col, FormGroup, Alert } from 'react-bootstrap';
+import { FormGroup, Alert } from 'react-bootstrap';
 import { useUser } from "../../context/User";
-import { Logo } from "../../components/Logo";
 import { LoginScreen } from './Screen';
 import { Field, Form } from 'react-final-form';
 import { RoundInput } from '../../components/RoundInput';
@@ -9,7 +8,7 @@ import { RoundButton } from '../../components/RoundButton';
 import { Link } from 'react-router-dom';
 export const LostPasswordForm: React.FC = () => {
     const [done, setDone] = useState("");
-    const { errors, user, userActions } = useUser();
+    const { userActions } = useUser();
     const onFormSubmit = (values: { username: string }) => {
         setDone("");
         userActions.recoverPassword(values).then((r: any) => {
@@ -31,7 +30,7 @@ export const LostPasswordForm: React.FC = () => {
                 render={({ handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
                         <Field name="username">
-                            {({ input, meta }) => (
+                            {({ input }) => (
                                 <FormGroup>
                                     <label>Correo Electronico:</label>
                                     <RoundInput size="sm" type="email" {...input} />

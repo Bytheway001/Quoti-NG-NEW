@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button, Col, FormGroup, FormLabel, Row } from "react-bootstrap";
+import { Col, FormGroup, FormLabel, Row } from "react-bootstrap";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { Field, Form } from "react-final-form";
 import { RoundButton } from "../../components/RoundButton";

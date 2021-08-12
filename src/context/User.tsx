@@ -68,7 +68,7 @@ export const UserProvider: React.FC = ({ children }) => {
       recoverPassword,
       updatePassword
     }),
-    [LogoutUser]
+    [LogoutUser,recoverPassword,updatePassword]
   );
   let token = getToken("user_data")
   const value = {

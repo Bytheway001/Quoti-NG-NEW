@@ -10,7 +10,7 @@ import {
 import { useFiles } from "./context";
 
 export const Sidebar: React.FC = () => {
-  const { fileActions,filters } = useFiles();
+  const { fileActions } = useFiles();
 
   useEffect(() => {
     fileActions.getFiles();

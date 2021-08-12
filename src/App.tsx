@@ -3,19 +3,17 @@ import "./assets/scss/application.scss";
 import { BrowserRouter, Switch, Route,} from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import { Test } from "./components/Test";
-import { LoginScreen } from "./screens/login/Screen";
 import BasicLayout from "./layouts/Basic";
 import { HomePage } from "./screens/home/screen";
 import Comparador from "./screens/comparador/Comparador";
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import { Cotizador } from "./screens/cotizador/cotizador";
 import { Directorio } from "./screens/directorio/directorio";
-import { UserProvider } from "./context/User";
 import {LostPasswordForm} from './screens/login/LostPasswordForm';
 import {UpdatePasswordForm} from './screens/login/UpdatePasswordForm';
 import { LoginForm } from "./screens/login/Form";
 
-function App() {
+const App:React.FC = ()=> {
   return (
     <BrowserRouter>
       <BasicLayout>

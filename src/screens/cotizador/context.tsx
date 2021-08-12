@@ -71,7 +71,7 @@ export const QuoteProvider: React.FC = ({ children }) => {
       if(!rate) throw new Error("No Rate Object");
       let rider = rate.riders.find(r=>r.name===name)
       if(!rider) throw new Error("No rider found")
-      rider.selected=(value==1);
+      rider.selected=(value===1);
       setQuote(newQuote)
 
     }

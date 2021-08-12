@@ -1,6 +1,6 @@
 import React from "react";
-import { Document, StyleSheet, Text, View } from "@react-pdf/renderer";
-import { Page, Row, Col, Cell } from "./grid";
+import { Document, StyleSheet, Text } from "@react-pdf/renderer";
+import { Page, Row, Col } from "./grid";
 
 import { ICompare } from "../screens/comparador/types";
 

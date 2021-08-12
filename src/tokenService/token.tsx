@@ -1,5 +1,5 @@
 import Axios from "axios";
-import axios, { AxiosRequestConfig } from "axios";
+import axios from "axios";
 import { APIURL } from "../utils";
 
 export function setToken(tokenName: string, tokenValue: string) {
