@@ -1,0 +1,22 @@
+.files-sidebar {
+  position: sticky;
+  top: 150px;
+  padding: 20px;
+  padding-top: 50px;
+  font-size: 0.9em;
+  label {
+    color: white;
+  }
+  select {
+    background-color: $dark-blue;
+    color: white;
+    border: none;
+    border-bottom: white 2px solid;
+    border-radius: 0px;
+    
+    option {
+      background-color: $dark-blue;
+      color: white;
+    }
+  }
+}

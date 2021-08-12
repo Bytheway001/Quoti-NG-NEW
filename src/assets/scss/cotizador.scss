@@ -1,0 +1,285 @@
+@import "variables";
+.plan-card {
+  box-shadow: 5px 5px 10px $medium-blue;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  .card-header {
+    border-radius: 0px;
+    border-top-left-radius: 20px;
+
+    background-color: $dark-blue;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  .card-body {
+    background: $medium-blue;
+    color: white;
+    border: none;
+    border: $dark-blue 2px solid;
+    .form-control {
+      background: none;
+      color: white;
+      border: none;
+      border-bottom: white 2px solid;
+      border-radius: 0px;
+
+      option {
+        color: white;
+        background-color: $medium-blue;
+        &:hover {
+          display: none !important;
+        }
+      }
+    }
+  }
+  .card-footer {
+    .table {
+      tr,
+      td,
+      th {
+        border: none;
+      }
+      font-size: 0.8em;
+      border: none !important;
+      color: yellow;
+    }
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom-right-radius: 20px;
+    .btn {
+      border: none;
+      background: none;
+      color: white;
+    }
+  }
+  .coverage-bg {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+}
+.cotizador-sidebar {
+  padding: 20px;
+  padding-top: 50px;
+  font-size: 0.85em;
+  .form-control {
+    border: none;
+    border-bottom: white 2px solid;
+    border-radius: 0px;
+    background: none;
+    color: white;
+    font-size: 1em;
+    option {
+      background-color: $dark-blue;
+      color: white;
+    }
+  }
+  .label-form {
+    color: white;
+  }
+
+  .plans-selected {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .plan-selected {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: white 1px solid;
+      padding: 12px;
+      color: white;
+      font-size: 1.1em;
+      box-shadow: 1px 1px 1px white;
+      .riders {
+        display: flex;
+        flex-direction: row;
+        .trash-icon {
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cotizador-card {
+  height: 100%;
+  border: none;
+ 
+  .card-header {
+    border-radius: 0px;
+    background-color: $dark-blue;
+    color: white;
+  }
+  .card-body {
+    .company-buttons{
+      button{
+        background:steelblue;
+       
+      }
+    }
+    padding: 0px;
+    button {
+     
+      border-radius: 0px;
+      background-color: $medium-blue;
+      border: none;
+     
+    }
+  }
+}
+
+.quote-table-wrapper {
+  padding: 0px;
+  padding-top: 20px;
+  overflow-y: scroll;
+  width: 100%;
+
+  max-height: 78vh;
+
+  .plan-card {
+    height: 100%;
+    .card-header {
+      border-top-left-radius: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+    }
+    .card-body {
+      background: $medium-blue;
+      .coverage-bg {
+        background-color: gray;
+        color: white;
+        text-align: center;
+      }
+      .riders-area {
+        padding-left: 20px;
+        min-height: 95px;
+      }
+
+      button {
+        background: $dark-blue;
+      }
+    }
+    .card-footer {
+      min-height: 85px;
+    }
+  }
+}
+
+.kid-age-form-control {
+  &.row {
+    text-align: center;
+    justify-content: center;
+    align-items: center !important;
+  }
+  .col-sm-2 {
+    margin-left: 3px;
+  }
+  .form-control {
+    text-align: center;
+    border: white 1px solid !important;
+  }
+}
+
+.modal-90w{
+  max-width: 90%!important;
+  width: 90%!important;
+}
+
+.quote-modal {
+ 
+  
+  .modal-content{
+    border:$dark-blue 2px solid;
+  }
+  .modal-header{
+    background: $dark-blue;
+    color:white;
+  }
+  .quote-modal-header {
+    
+    background-color: $alt-blue;
+    border-radius: 10px;
+    color: white;
+    padding: 12px;
+    p {
+      font-weight: 100;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+  }
+  .quote-modal-deductible {
+    background: $alt-blue;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    padding: 8px;
+  }
+  .table {
+    border-collapse: separate;
+    font-size: 0.85em;
+    border: none;
+    border-spacing:5px 10px;
+    th {
+      border: none;
+      vertical-align: middle;
+    }
+    thead{
+      button{
+        box-shadow: none;
+        &.selected{
+          background:green;
+        }
+      }
+    }
+    tbody {
+      tr {
+        background: #40b4e520;
+        &:nth-child(2),&:nth-child(6){
+          background: white;
+        }
+      
+        
+      }
+      th {
+       
+       
+        &:not(:nth-child(1)) {
+          text-align: center;
+          font-size: 100;
+        }
+      }
+    }
+    tfoot{
+      tr{
+        th{
+          text-align: center;
+          border-radius:20px;
+          font-size: 1.1em;
+         
+          &:not(:first-child){
+            color:white;
+            background: $dark-blue;
+          }
+        }
+ 
+      
+      }
+     
+    }
+  }
+}
