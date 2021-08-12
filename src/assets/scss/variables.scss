@@ -1,0 +1,25 @@
+/* Pantone */
+$light-blue: #40b4e5;
+$dark-blue: #0042a5;
+$medium-blue: #5b86e5;
+$dark-gray: #5a5c5e;
+$alt-blue:#0062cc;
+
+/* Sizes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.light-blue-text{
+  color:$light-blue
+}
+
+.bg-blue-dark{
+  background-color:$dark-blue
+}
+
+.bg-alt-blue{
+  background-color: $alt-blue!important;
+}
