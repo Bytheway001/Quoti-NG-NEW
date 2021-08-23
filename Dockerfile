@@ -5,7 +5,7 @@
  COPY . .
  RUN yarn install
  RUN yarn upgrade node-sass
- EXPOSE 3000
+
  RUN chmod 777 node_modules
  
  CMD ["yarn","start"]

@@ -19,8 +19,7 @@ export const CompareProvider: React.FC = ({ children }) => {
 
   const [loading, setLoading] = useState<boolean>(false);
   const getPlanNames = () => {
- 
-    Axios.get(APIURL + "/plans/getNames")
+     Axios.get(APIURL + "/plans/getNames")
       .then((res) => {
         setPlanNames(res.data.data);
       })
@@ -40,7 +39,7 @@ export const CompareProvider: React.FC = ({ children }) => {
   const compareActions = useMemo(
     () => ({
       getCompare: (plans: string[]) => getCompare(plans),
-      getPlanNames: () => getPlanNames(),
+      getPlanNames
     }),
     []
   );
