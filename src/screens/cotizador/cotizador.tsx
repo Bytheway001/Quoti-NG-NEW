@@ -1,19 +1,52 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { QuoteProvider } from './context';
+import { QuoteProvider, useQuote } from './context';
 import { SideBarScreen } from '../../layouts/SidebarScreen';
 import { Sidebar } from './Sidebar';
 import { QuoteTable } from './Table';
+export interface IIndexable {
+    [key: string]: string;
+}
+const CotizadorHOC: React.FC = () => {
+    const countries: IIndexable = {
 
-export const Cotizador:React.FC = ()=>{
-    return(
-        <QuoteProvider>
-            <SideBarScreen Sidebar={Sidebar}>
+        BO: "Bolivia",
+        PY: "Paraguay"
+    }
+    const types: IIndexable = {
+
+        "1": "Personal",
+        "2": "Parejas"
+    }
+    const { quote } = useQuote();
+    return (
+        <SideBarScreen Sidebar={Sidebar}>
             <Card className='cotizador-card'>
-                <Card.Header>Cotizacion de Planes</Card.Header>
-                <QuoteTable/>
+                <Card.Header className='d-flex flex-row justify-content-between align-items-centere'>
+                    Cotizacion de Planes
+
+                    {
+                        quote && (
+                            <div>
+                                <span className='mr-3'>Pais: {countries[quote?.params.country]}</span>
+                                <span>Tipo: {types[quote?.params.plan_type]}</span>
+
+                            </div>
+                        )
+
+                    }
+                </Card.Header>
+                <QuoteTable />
             </Card>
-            </SideBarScreen>
+        </SideBarScreen>
+    )
+}
+export const Cotizador: React.FC = () => {
+
+    return (
+        <QuoteProvider>
+
+            <CotizadorHOC />
         </QuoteProvider>
     )
 }
