@@ -22,7 +22,6 @@ export const QuoteProvider: React.FC = ({ children }) => {
   /* Actions */
   const getQuote = (values: IFormValues) => {
     setLoading(true);
-
     Axios.post(APIURL + "/plans/quote", values)
       .then((res) => {
         setQuote(res.data.data);
@@ -34,6 +33,7 @@ export const QuoteProvider: React.FC = ({ children }) => {
         setLoading(false)
       })
   };
+  
   const addToCompare = (plan:IPlan,ded:number) => {
     if(compare.length>=4){
       alert("Solo puede seleccionar un maximo de 4 planes");

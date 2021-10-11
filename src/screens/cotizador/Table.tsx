@@ -7,6 +7,10 @@ import { PlanCard } from "./PlanCard";
 export const QuoteTable: React.FC = () => {
   const { quote, loading } = useQuote();
   const [company, setCompany] = useState("");
+ 
+  if (loading) {
+    return <Loader />;
+  }
   if (quote) {
     const companyNames = Array.from(
       new Set(quote.plans.map((obj) => obj.company))
@@ -36,9 +40,6 @@ export const QuoteTable: React.FC = () => {
         </div>
       </Card.Body>
     );
-  }
-  if (loading) {
-    return <Loader />;
   }
   return null;
 };
